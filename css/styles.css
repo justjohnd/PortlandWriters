@@ -1,0 +1,337 @@
+body {
+  box-sizing: border-box;
+  color: #230b00;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/**Note: Box-sizing: This property controls the box-model used by browser. Border-box will cause the width and height of all element containers to adjust to include borders and padding. Good general rule to set this property universally***/
+/*Note: Default padding is 0*/
+p {
+  font-family: 'Ibarra Real Nova', san-serif;
+  line-height: 1.4;
+  font-weight: 500;
+  font-size: 22px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Noto sans", sans-serif;
+  font-weight: 900;
+  padding: 0;
+  margin: 0;
+}
+
+hr {
+  width: 80%;
+  height: 1px;
+  border: 0;
+  margin: 0 auto;
+  background: #b3b3b3;
+}
+
+/* Headings */
+.section-heading {
+  font-size: 2rem;
+}
+
+/* Backgrounds */
+.paper-background {
+  text-align: center;
+  background-image: url("../images/paper.jpg");
+  height: auto;
+  background-size: cover;
+  padding-bottom: 30px;
+}
+
+.paper-background p {
+  font-weight: 500;
+}
+
+
+/* Navigation Section */
+nav {
+  background-color: #fff;
+  padding: 10px 10px 10px 20px;
+  margin: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+/*Q: Why can I not change the right-hand padding above? Why does increasing the left-hand padding begin to push the menu off screen?*/
+
+/*Note: Flex-items will grow or shrink to fit space available in container. "Display: flex" makes nav a flex container. Flex boxes are one dimensional: affect only row or column axis*/
+/*"Align-items" will align along the cross-axis (for rows, vertical axis)" Values include: flex-start, center, flex-end, etc.*/
+.header-left {
+  display: flex;
+  align-items: center;
+}
+
+.title {
+  font-family: roboto;
+  color: #f58b54;
+  padding: 0 0 0 5px;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+.logo {
+  width: 125px;
+}
+
+ul {
+  display: flex;
+  margin: 0 30px 0 0;
+}
+
+li {
+  padding: 0 15px;
+  list-style-type: none;
+}
+
+li a {
+  text-transform: lowercase;
+  color: #0d0909;
+  font-family: 'Ibarra Real Nova', serif;
+}
+
+li a:hover {
+  color: #674848;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Hero Section */
+.hero-text {
+  color: #fff;
+  text-align: center;
+  text-shadow: 0 0 3px rgba(0, 0, 0, 0.9);
+  padding-top: 350px;
+  font-weight: 700;
+  font-family: 'Indie Flower';
+  font-size: 70px;
+}
+
+/* Intro Sections */
+.large-text-area {
+  padding: 40px 250px;
+  text-align: justify;
+  padding-bottom: 30px;
+}
+/*Note: If margins look uneven on text blocks, try text-align: justify*/
+
+/*Hero Section*/
+.hero {
+  background-image: url("../images/hero.jpg");
+  height: 500px;
+  background-size: 105%;
+  background-position: -54px 0;
+  background-repeat: no-repeat;
+  margin-top: 83px;
+}
+/*Q: HOW DO YOU STYLE THE POSITIONING OF THE BACKGROUND IMAGE*/
+/*A: Properties like padding, text-align, etc. do not affect the background image. Non-inherited. Use background-position property to affect position. First value is "px from left". Second value is "px from right". If second value is left blank, default is "center" which will may negatively affect position of background**/
+/*Q: WHY DOES THE TEXT COLOR HAVE TO BE STYLED UNDER IT'S OWN CLASS, VS. BEING ABLE TO INHERIT IT FROM THE HEO CLASS*/
+/*A: Header will inherit it's value in this order: (1) from identifier that wraps around the header; (2) from Header selector CSS; (3) from its container. If class="hero" is left out of the h1 element, it will not inherit the .hero style*/
+
+/*cta*/
+.container-cta {
+  text-align: center;
+  padding: 15px;
+  background-color: rgb(201, 35, 6, 0.8);
+}
+
+.cta {
+  color: white;
+  font-size: 18px;
+  margin: 0;
+  font-weight: 700;
+}
+
+/* Brain Food Section */
+.brainfood {
+  padding: 0 100px 50px 100px;
+}
+.brainfood-header {
+  padding: 50px 0 10px;
+  font-size: 2rem;
+}
+
+.brainfood-container {
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  width: 95%;
+}
+/*Q: IS THE DEFAULT WIDTH OF A GRID THAT OF THE VIEWER?*/
+/*Q: DOES JUSTIFY-ITEMS PROPERTY HAVE NO EFFECT BECAUSE I'M USING PERCENTAGE VALUES IN THE GRID-TEMPLATE-COLUMNS PRO
+/*Q: I WANTED EVEN SPACE BOTH BETWEEN COLUMNS AND ON THE ENDS; ADJUSTED WIDTH ABOVE TO APPROXIMATELY ATTAIN THIS. IS THERE A JUSTIFY-CONTENT VALUE THAT WILL DO THIS?*/
+/*Note: Width property will be affected by any widths set for the grid contents. Grid contents may overflow if width is too narrow and grid container width is too wide*/
+/*Note: Grid-gap property may overflow contents off screen*/
+/*Note: Justify-content property adjust remaining space around the grid items; Space-evenly value flushes the furthest left and right items against the border*/
+
+.features-column {
+  padding: 11%;
+}
+/*Note: Add padding or margins the grid to add space around the contents*/
+/*Width: will compress everything into the specified width, overriding the value in the grid-template-columns property*/
+.icon-color {
+    color: rgb(201, 35, 6, 0.8);
+    margin-bottom: 1rem;
+}
+
+.icon-color:hover {
+  color: #f58b54;
+}
+
+.feature-title {
+  font-size: 1.3rem;
+  line-height: 1.2;
+}
+
+.feature-text {
+  color: #8f8f8f;
+  margin: 0;
+  font-size: 1rem;
+  padding: 0 20%;
+}
+
+/* Mentorships Section */
+#mentorships h1 {
+  text-align: center;
+  padding: 50px 0 0 0;
+}
+
+.mentorships-container {
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  justify-items: center;
+  justify-content: space-between;
+  padding: 0 100px;
+  margin-bottom: 50px;
+}
+/*Justify items adjust location of items along the row axis: Start, center, end*/
+/*Q: JUSTIFY ITEMS WORKS, BUT LEFT AND WRITE MARGINS IN THE CONTAINER ARE UNEVEN*/
+/*Q: WHY DOES JUSTIFY CONTENT NOT WORK?*/
+
+.mentorships-grid {
+  height: auto;
+  width: 90%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+/*Note: Width property will change width of each item. This will override any size defined in the parent container element*/
+/*Q: HOW CAN I FORMAT THIS AS A SQUARE*/
+
+.mentorships-text {
+  padding: 0px 250px 20px 250px;
+  text-align: justify;
+  padding-bottom: 30px;
+}
+
+/* About Seth Section */
+#about-seth {
+  padding: 100px;
+  margin: 0 auto;
+}
+
+#about-seth h1 {
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+#about-seth p {
+  text-align: justify;
+}
+
+.about-seth-image {
+  width: 50%;
+  padding: 0 60px 0 0;
+  float: left;
+  margin-bottom: 60px;
+  border-radius: 100%;
+}
+
+#rates {
+  clear: left;
+  background: rgba(122, 122, 122, 0.21);
+}
+
+.rates-container {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-gap: 10px;
+  padding: 30px;
+  align-items: start;
+  justify-items: center;
+  margin: 100px;
+}
+
+.rates-grid-a h1 {
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.rates-grid-a p {
+  text-align: justify;
+  line-height: 1.8;
+  font-size: 16px;
+}
+
+.rates-grid-b {
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
+  background: #fff;
+  margin-right: 250px;
+  padding: 10px;
+}
+
+.rates-grid-b p {
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+.week {
+  font-family: "poppins", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  line-height: 1.8;
+  text-align: left;
+  color: #ffa500;
+}
+
+#contact h1 {
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+/*Q: IF YOU ADDED PADDING TO #contact selector, would there be any way to override it for h1 to get h1 recentered again? E.g. if you pud all the .contact-form property values into #contact and the styled h1 seperately?*/
+/*Q: Is this the best way to style this container? (See use of 168px alignment below; seems hacky)*/
+/*Note: Margin: auto must include a width to function. Width cannot be written as a percentage. Note that text will be left-aligned, so applying using this to center text in a containers will not work unless the text is truncated. Text-align: center will align the header and the form elements below*/
+.contact-form {
+  color: #230b00;
+  font: normal 20px "roboto", sans-serif;
+  line-height: 2;
+  font-weight: 500;
+  text-align: left;
+  padding-left: 168px
+}
+
+#footer {
+  background: #ffbd44;
+  padding: 50px;
+}
+
+.footer-text {
+  color: #fff;
+  font: normal 12px "roboto", sans-serif;
+  line-height: 1.2;
+  font-weight: 500;
+}
