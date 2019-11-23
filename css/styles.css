@@ -1,8 +1,8 @@
 body {
   box-sizing: border-box;
-  color: #230b00;
-  margin: 0 auto;
+  color: #262626;
   text-align: center;
+  margin: 0;
 }
 
 /**Note: Box-sizing: This property controls the box-model used by browser. Border-box will cause the width and height of all element containers to adjust to include borders and padding. Good general rule to set this property universally***/
@@ -29,6 +29,15 @@ hr {
   background: #b3b3b3;
 }
 
+hr-padding {
+  width: 80%;
+  height: 1px;
+  border: 0;
+  margin: 0 auto;
+  background: #b3b3b3;
+  margin: 30px;
+}
+
 /* Headings */
 .section-heading {
   font-size: 2rem;
@@ -40,7 +49,6 @@ hr {
   background-image: url("../images/paper.jpg");
   height: auto;
   background-size: cover;
-  padding-bottom: 30px;
 }
 
 .paper-background p {
@@ -94,7 +102,7 @@ li {
 
 li a {
   text-transform: lowercase;
-  color: #0d0909;
+  color: #262626;
   font-family: 'Ibarra Real Nova', serif;
 }
 
@@ -140,17 +148,19 @@ a {
 /*A: Header will inherit it's value in this order: (1) from identifier that wraps around the header; (2) from Header selector CSS; (3) from its container. If class="hero" is left out of the h1 element, it will not inherit the .hero style*/
 
 /*cta*/
-.container-cta {
-  text-align: center;
-  padding: 15px;
-  background-color: rgb(201, 35, 6, 0.8);
-}
 
 .cta {
+  background-color: rgb(201, 35, 6, 0.8);
+  border: none;
+  width: 100%;
   color: white;
-  font-size: 18px;
-  margin: 0;
-  font-weight: 700;
+}
+
+.cta-text {
+    font-size: 19px;
+    padding: 8px;
+    text-decoration: none;
+    font-weight: 700;
 }
 
 /* Brain Food Section */
@@ -163,17 +173,12 @@ a {
 }
 
 .brainfood-container {
-  margin: 0 auto;
   display: grid;
-  grid-template-columns: 33% 33% 33%;
-  width: 95%;
+  grid-template-columns: 1fr 1fr 1fr;
 }
-/*Q: IS THE DEFAULT WIDTH OF A GRID THAT OF THE VIEWER?*/
-/*Q: DOES JUSTIFY-ITEMS PROPERTY HAVE NO EFFECT BECAUSE I'M USING PERCENTAGE VALUES IN THE GRID-TEMPLATE-COLUMNS PRO
-/*Q: I WANTED EVEN SPACE BOTH BETWEEN COLUMNS AND ON THE ENDS; ADJUSTED WIDTH ABOVE TO APPROXIMATELY ATTAIN THIS. IS THERE A JUSTIFY-CONTENT VALUE THAT WILL DO THIS?*/
-/*Note: Width property will be affected by any widths set for the grid contents. Grid contents may overflow if width is too narrow and grid container width is too wide*/
+/*Note: Default width is always 100% width of the viewer*/
+/*Note: If you wanted to have equal space on sides and in gaps, you could define all as grid columns, combining fractions and/or percentages, px, etc./
 /*Note: Grid-gap property may overflow contents off screen*/
-/*Note: Justify-content property adjust remaining space around the grid items; Space-evenly value flushes the furthest left and right items against the border*/
 
 .features-column {
   padding: 11%;
@@ -208,26 +213,21 @@ a {
 }
 
 .mentorships-container {
-  margin: 0 auto;
   display: grid;
-  grid-template-columns: 33% 33% 33%;
-  justify-items: center;
-  justify-content: space-between;
-  padding: 0 100px;
-  margin-bottom: 50px;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 0 100px 50px 100px;
 }
-/*Justify items adjust location of items along the row axis: Start, center, end*/
-/*Q: JUSTIFY ITEMS WORKS, BUT LEFT AND WRITE MARGINS IN THE CONTAINER ARE UNEVEN*/
-/*Q: WHY DOES JUSTIFY CONTENT NOT WORK?*/
+/*Note: Justify-Items is a parent property container that will justify cell contents along row axis: start, center, end. It will only have an effect if there is free space inside the cell. These cells are full, so property has no effect
+/*Note: Justify-content property adjust remaining space around the grid items; Space-evenly value flushes the furthest left and right items against the border. Neither properties have any affect because the cells are full and there is no additional space*/
 
 .mentorships-grid {
-  height: auto;
   width: 90%;
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
-/*Note: Width property will change width of each item. This will override any size defined in the parent container element*/
+/*Note: Width property here is being applied to the child cell to create a gap. You need to set the margin on left and right though to center the image*/
+
 /*Q: HOW CAN I FORMAT THIS AS A SQUARE*/
 
 .mentorships-text {
@@ -236,15 +236,19 @@ a {
   padding-bottom: 30px;
 }
 
+.image-writing {
+  object-fit: cover;
+  height: 210.53px;
+}
+
 /* About Seth Section */
 #about-seth {
-  padding: 100px;
+  padding: 100px 100px 80px 100px;
   margin: 0 auto;
 }
 
 #about-seth h1 {
   text-align: center;
-  padding-bottom: 20px;
 }
 
 #about-seth p {
@@ -253,80 +257,144 @@ a {
 
 .about-seth-image {
   width: 50%;
-  padding: 0 60px 0 0;
+  padding: 0 60px 60px 0;
   float: left;
-  margin-bottom: 60px;
   border-radius: 100%;
 }
 
 #rates {
   clear: left;
-  background: rgba(122, 122, 122, 0.21);
+  margin: 50px 0;
 }
 
 .rates-container {
   display: grid;
-  grid-template-columns: 50% 50%;
-  grid-gap: 10px;
-  padding: 30px;
-  align-items: start;
-  justify-items: center;
-  margin: 100px;
+  grid-template-columns: 130px auto 60px 360px 130px;
 }
 
 .rates-grid-a h1 {
   text-align: center;
-  padding-bottom: 10px;
+  margin-bottom: 40px;
+  line-height: 1.1;
+  font-size: 36px;
+  font-weight: 700;
+  font-family: 'Ibarra Real Nova', san-serif;
+  color: rgb(201, 35, 6, 0.8);
 }
 
 .rates-grid-a p {
-  text-align: justify;
-  line-height: 1.8;
-  font-size: 16px;
+  text-align: left;
+  font-style: regular;
+  line-height: 1.4;
+  font-size: 19px;
+  color: #262626;
 }
 
 .rates-grid-b {
-  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
-  background: #fff;
-  margin-right: 250px;
-  padding: 10px;
+  background: #f2f2f2;
+  padding: 20px;
+  text-align: left;
 }
 
-.rates-grid-b p {
+.creative-writing {
+  font-size: 19px;
+  font-style: bold;
+  line-height: 0;
+  color: #333333;
+}
+
+.rates-description {
   font-size: 14px;
-  line-height: 1.2;
+  letter-spacing: 0.3px;
+  line-height: 1.4;
+  color: rgba(0, 0, 0, 0.6);
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+
+.rates-text {
+  font-size: 14px;
+  letter-spacing: 0.3px;
+  line-height: .1;
+  color: rgba(0, 0, 0, 0.6);
+  font-weight: bold;
+  font-family: "Noto sans", sans-serif;
 }
 
 .week {
-  font-family: "poppins", sans-serif;
-  font-size: 18px;
-  font-weight: 600;
+  font-size: 14px;
   letter-spacing: 0.3px;
-  line-height: 1.8;
-  text-align: left;
-  color: #ffa500;
+  line-height: 18px;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+/*Contact Section*/
+
+#contact {
+  padding: 30px 100px;
 }
 
 #contact h1 {
-  padding-bottom: 20px;
+  padding: 20px;
   text-align: center;
 }
 
-/*Q: IF YOU ADDED PADDING TO #contact selector, would there be any way to override it for h1 to get h1 recentered again? E.g. if you pud all the .contact-form property values into #contact and the styled h1 seperately?*/
-/*Q: Is this the best way to style this container? (See use of 168px alignment below; seems hacky)*/
-/*Note: Margin: auto must include a width to function. Width cannot be written as a percentage. Note that text will be left-aligned, so applying using this to center text in a containers will not work unless the text is truncated. Text-align: center will align the header and the form elements below*/
-.contact-form {
-  color: #230b00;
-  font: normal 20px "roboto", sans-serif;
-  line-height: 2;
-  font-weight: 500;
-  text-align: left;
-  padding-left: 168px
+form {
+  padding: 0 100px;
+}
+
+.form-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grit-template-rows: 25% 25% 50% 25%;
+}
+
+#input-subject, #input-message {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+#input-message {
+  height: 100px;
+}
+
+#input-name {
+  width: 85%;
+}
+
+
+input[type=text], input[type=email], textarea, select {
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: "Noto sans", sans-serif;
+}
+
+input[type=submit] {
+  width: 20%;
+  background-color: #f58b54;
+  color: white;
+  padding:12px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: rgb(201, 35, 6, 0.8);;
 }
 
 #footer {
-  background: #ffbd44;
-  padding: 50px;
+  background: #230b00;
+  padding: 20px;
+  text-align: left;
+}
+
+#footer h3 {
+  color: #fff;
+  line-height: 2;
 }
 
 .footer-text {
@@ -334,4 +402,6 @@ a {
   font: normal 12px "roboto", sans-serif;
   line-height: 1.2;
   font-weight: 500;
+  padding: 0;
+  margin: 0;
 }
