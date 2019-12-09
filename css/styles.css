@@ -1,8 +1,13 @@
+html {
+  scroll-padding-top: 54px;
+}
+
 body {
   box-sizing: border-box;
   color: #262626;
   text-align: center;
   margin: 0;
+  scroll-padding-top: 54px;
 }
 
 /**Note: Box-sizing: This property controls the box-model used by browser. Border-box will cause the width and height of all element containers to adjust to include borders and padding. Good general rule to set this property universally***/
@@ -12,6 +17,7 @@ p {
   line-height: 1.4;
   font-weight: 500;
   font-size: 22px;
+  margin-bottom: 0;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -29,6 +35,12 @@ hr {
   background: #b3b3b3;
 }
 
+@media screen and (max-width: 576px) {
+  hr {
+    width: 20%;
+  }
+}
+
 hr-padding {
   width: 80%;
   height: 1px;
@@ -41,6 +53,11 @@ hr-padding {
 /* Headings */
 .section-heading {
   font-size: 2rem;
+  padding-bottom: 16px;
+}
+
+.container-fluid.section-heading {
+  padding-bottom: 0;
 }
 
 /* Backgrounds */
@@ -48,107 +65,180 @@ hr-padding {
   text-align: center;
   background-image: url("../images/paper.jpg");
   height: auto;
-  background-size: cover;
 }
 
+/* Note: Background-size: cover is not necessary. Applying this size will cause the image to distort as screen size changes.*/
 .paper-background p {
   font-weight: 500;
 }
 
+/*Containers*/
+.container-fluid {
+  padding: 5% 10%;
+}
+
+.text-fluid {
+  padding: 0 10%;
+  text-align: justify;
+}
 
 /* Navigation Section */
-nav {
+.navbar {
   background-color: #fff;
-  padding: 10px 10px 10px 20px;
-  margin: 0;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 100;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
 }
-/*Q: Why can I not change the right-hand padding above? Why does increasing the left-hand padding begin to push the menu off screen?*/
 
-/*Note: Flex-items will grow or shrink to fit space available in container. "Display: flex" makes nav a flex container. Flex boxes are one dimensional: affect only row or column axis*/
-/*"Align-items" will align along the cross-axis (for rows, vertical axis)" Values include: flex-start, center, flex-end, etc.*/
 .header-left {
   display: flex;
   align-items: center;
 }
 
-.title {
-  font-family: roboto;
+/*Q: Why does display: flex put .header-left items inline, but display: inline does not*/
+@media screen and (max-width: 700px) {
+  .header-left {
+    width: 80%;
+  }
+}
+
+.title-header {
+  font-family: "Noto sans", sans-serif;
   color: #f58b54;
   padding: 0 0 0 5px;
   font-size: 18px;
   text-transform: uppercase;
+  text-decoration: none;
+  margin: -5px;
+  display: inherit;
+}
+
+.title-header:hover {
+  font-family: "Noto sans", sans-serif;
+  color: #f58b54;
+  padding: 0 0 0 5px;
+  font-size: 18px;
+  text-transform: uppercase;
+  text-decoration: none;
+  margin: -5px;
+}
+
+@media screen and (max-width: 700px) {
+  .logo {
+    display: none;
+  }
 }
 
 .logo {
   width: 125px;
 }
 
-ul {
-  display: flex;
-  margin: 0 30px 0 0;
-}
-
-li {
-  padding: 0 15px;
-  list-style-type: none;
-}
-
-li a {
+#menu {
   text-transform: lowercase;
   color: #262626;
   font-family: 'Ibarra Real Nova', serif;
 }
 
-li a:hover {
+#menu:hover {
   color: #674848;
 }
 
-a {
-  text-decoration: none;
-}
-
-/* Hero Section */
-.hero-text {
-  color: #fff;
-  text-align: center;
-  text-shadow: 0 0 3px rgba(0, 0, 0, 0.9);
-  padding-top: 350px;
-  font-weight: 700;
-  font-family: 'Indie Flower';
-  font-size: 70px;
+/* Main */
+main {
+  margin-top: 54px;
 }
 
 /* Intro Sections */
-.large-text-area {
-  padding: 40px 250px;
-  text-align: justify;
-  padding-bottom: 30px;
-}
-/*Note: If margins look uneven on text blocks, try text-align: justify*/
-
 /*Hero Section*/
 .hero {
   background-image: url("../images/hero.jpg");
   height: 500px;
   background-size: 105%;
-  background-position: -54px 0;
+  background-position: 100% top;
   background-repeat: no-repeat;
-  margin-top: 83px;
 }
+
+@media screen and (max-width: 992px) {
+  .hero {
+    background-image: url("../images/hero.jpg");
+    height: 450px;
+    background-size: 150%;
+    background-position: 55% top;
+    background-repeat: no-repeat;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero {
+    background-image: url("../images/hero.jpg");
+    height: 420px;
+    background-size: 150%;
+    background-position: 55% top;
+    background-repeat: no-repeat;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .hero {
+    background-image: url("../images/hero.jpg");
+    height: 420px;
+    background-size: 200%;
+    background-position: 55% top;
+    background-repeat: no-repeat;
+  }
+}
+
+.hero-text {
+  color: #fff;
+  text-align: center;
+  text-shadow: 0 0 3px rgba(0, 0, 0, 0.9);
+  padding-top: 28%;
+  font-weight: 700;
+  font-family: 'Indie Flower';
+  font-size: 70px;
+}
+
+@media screen and (max-width: 992px) {
+  .hero-text {
+    color: #fff;
+    text-align: center;
+    text-shadow: 0 0 3px rgba(0, 0, 0, 0.9);
+    padding: 35% 0;
+    line-height: 1.4;
+    font-weight: 700;
+    font-family: 'Indie Flower';
+    font-size: 66px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero-text {
+    color: #fff;
+    text-align: center;
+    text-shadow: 0 0 3px rgba(0, 0, 0, 0.9);
+    padding: 40% 0;
+    line-height: 1.4;
+    font-weight: 700;
+    font-family: 'Indie Flower';
+    font-size: 66px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .hero-text {
+    color: #fff;
+    text-align: center;
+    text-shadow: 0 0 3px rgba(0, 0, 0, 0.9);
+    padding: 50% 0;
+    line-height: 1.4;
+    font-weight: 700;
+    font-family: 'Indie Flower';
+    font-size: 64px;
+  }
+}
+
 /*Q: HOW DO YOU STYLE THE POSITIONING OF THE BACKGROUND IMAGE*/
 /*A: Properties like padding, text-align, etc. do not affect the background image. Non-inherited. Use background-position property to affect position. First value is "px from left". Second value is "px from right". If second value is left blank, default is "center" which will may negatively affect position of background**/
 /*Q: WHY DOES THE TEXT COLOR HAVE TO BE STYLED UNDER IT'S OWN CLASS, VS. BEING ABLE TO INHERIT IT FROM THE HEO CLASS*/
 /*A: Header will inherit it's value in this order: (1) from identifier that wraps around the header; (2) from Header selector CSS; (3) from its container. If class="hero" is left out of the h1 element, it will not inherit the .hero style*/
-
 /*cta*/
-
 .cta {
   background-color: rgb(201, 35, 6, 0.8);
   border: none;
@@ -156,38 +246,31 @@ a {
   color: white;
 }
 
+.cta a {
+  background-color: rgb(201, 35, 6, 0.8);
+  border: none;
+  width: 100%;
+  color: white;
+  text-decoration: none;
+}
+
 .cta-text {
-    font-size: 19px;
-    padding: 8px;
-    text-decoration: none;
-    font-weight: 700;
+  font-size: 19px;
+  padding: 8px;
+  text-decoration: none;
+  font-weight: 700;
 }
 
 /* Brain Food Section */
-.brainfood {
-  padding: 0 100px 50px 100px;
-}
-.brainfood-header {
-  padding: 50px 0 10px;
-  font-size: 2rem;
-}
-
-.brainfood-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-}
-/*Note: Default width is always 100% width of the viewer*/
-/*Note: If you wanted to have equal space on sides and in gaps, you could define all as grid columns, combining fractions and/or percentages, px, etc./
-/*Note: Grid-gap property may overflow contents off screen*/
-
 .features-column {
-  padding: 11%;
+  padding: 16px;
 }
+
 /*Note: Add padding or margins the grid to add space around the contents*/
 /*Width: will compress everything into the specified width, overriding the value in the grid-template-columns property*/
 .icon-color {
-    color: rgb(201, 35, 6, 0.8);
-    margin-bottom: 1rem;
+  color: rgb(201, 35, 6, 0.8);
+  margin-bottom: 1rem;
 }
 
 .icon-color:hover {
@@ -207,44 +290,39 @@ a {
 }
 
 /* Mentorships Section */
-#mentorships h1 {
-  text-align: center;
-  padding: 50px 0 0 0;
+.container-fluid.mentorships-text {
+  padding: 0 20%;
 }
 
-.mentorships-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  padding: 0 100px 50px 100px;
+#mentorships .row {
+  padding-top: 5%
 }
-/*Note: Justify-Items is a parent property container that will justify cell contents along row axis: start, center, end. It will only have an effect if there is free space inside the cell. These cells are full, so property has no effect
-/*Note: Justify-content property adjust remaining space around the grid items; Space-evenly value flushes the furthest left and right items against the border. Neither properties have any affect because the cells are full and there is no additional space*/
 
-.mentorships-grid {
-  width: 90%;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-/*Note: Width property here is being applied to the child cell to create a gap. You need to set the margin on left and right though to center the image*/
-
-/*Q: HOW CAN I FORMAT THIS AS A SQUARE*/
-
-.mentorships-text {
-  padding: 0px 250px 20px 250px;
-  text-align: justify;
-  padding-bottom: 30px;
+.image-mentorship {
+  width: 100%;
+  padding: 5%;
 }
 
 .image-writing {
   object-fit: cover;
-  height: 210.53px;
+  height: 90.5%;
+  padding-bottom: 0;
 }
 
 /* About Seth Section */
-#about-seth {
-  padding: 100px 100px 80px 100px;
-  margin: 0 auto;
+.about-seth-image {
+  width: 50%;
+  padding: 0 60px 0 0;
+  float: left;
+}
+
+@media screen and (max-width: 576px) {
+  .about-seth-image {
+    width: 100%;
+    padding: 0;
+    margin: 16px 0 32px 0;
+    float: none;
+  }
 }
 
 #about-seth h1 {
@@ -255,26 +333,23 @@ a {
   text-align: justify;
 }
 
-.about-seth-image {
-  width: 50%;
-  padding: 0 60px 60px 0;
-  float: left;
-  border-radius: 100%;
-}
-
 #rates {
   clear: left;
-  margin: 50px 0;
 }
 
 .rates-container {
   display: grid;
-  grid-template-columns: 130px auto 60px 360px 130px;
+  grid-template-columns: auto 40px 360px;
+}
+
+@media screen and (max-width: 576px) {
+  .rates-container {
+    display: block;
+  }
 }
 
 .rates-grid-a h1 {
   text-align: center;
-  margin-bottom: 40px;
   line-height: 1.1;
   font-size: 36px;
   font-weight: 700;
@@ -290,6 +365,12 @@ a {
   color: #262626;
 }
 
+@media screen and (max-width: 576px) {
+  .rates-grid-a {
+    margin-bottom: 32px;
+  }
+}
+
 .rates-grid-b {
   background: #f2f2f2;
   padding: 20px;
@@ -299,7 +380,6 @@ a {
 .creative-writing {
   font-size: 19px;
   font-style: bold;
-  line-height: 0;
   color: #333333;
 }
 
@@ -315,10 +395,11 @@ a {
 .rates-text {
   font-size: 14px;
   letter-spacing: 0.3px;
-  line-height: .1;
+  line-height: 1;
   color: rgba(0, 0, 0, 0.6);
   font-weight: bold;
   font-family: "Noto sans", sans-serif;
+  margin-bottom: 0;
 }
 
 .week {
@@ -326,66 +407,98 @@ a {
   letter-spacing: 0.3px;
   line-height: 18px;
   color: rgba(0, 0, 0, 0.6);
+  margin-bottom: 5px
 }
 
 /*Contact Section*/
-
-#contact {
-  padding: 30px 100px;
-}
-
-#contact h1 {
-  padding: 20px;
-  text-align: center;
-}
-
 form {
   padding: 0 100px;
+  text-align: left;
 }
 
-.form-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grit-template-rows: 25% 25% 50% 25%;
+@media screen and (max-width: 576px) {
+  form {
+    padding: 0;
+    text-align: center;
+  }
 }
 
-#input-subject, #input-message {
-  grid-column-start: 1;
-  grid-column-end: 3;
+.form-control {
+  width: 100%;
 }
 
-#input-message {
-  height: 100px;
-}
-
-#input-name {
-  width: 85%;
-}
-
-
-input[type=text], input[type=email], textarea, select {
-  padding: 12px 20px;
-  margin: 8px 0;
+.form-group {
+  margin-bottom: 16px;
   border: 1px solid #ccc;
   border-radius: 4px;
   font-family: "Noto sans", sans-serif;
+}
+
+@media screen and (max-width: 576px) {
+  .form-group {
+    margin-bottom: 0;
+  }
+}
+
+.form-group-50-50 {
+  display: flex;
+}
+
+.form-group-50-50 .form-control {
+  margin-right: 16px;
+}
+
+.form-group-50-50 .form-control:last-child {
+  margin-right: 0;
+}
+
+@media screen and (max-width: 576px) {
+  .form-group-50-50 {
+    display: block;
+  }
 }
 
 input[type=submit] {
   width: 20%;
   background-color: #f58b54;
   color: white;
-  padding:12px;
-  margin: 8px 0;
+  padding: 12px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
 }
 
 input[type=submit]:hover {
-  background-color: rgb(201, 35, 6, 0.8);;
+  background-color: rgb(201, 35, 6, 0.8);
+  ;
 }
 
+@media screen and (max-width: 576px) {
+  input {
+    margin-bottom: 16px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .form-control .form-group {
+    margin-bottom: 16px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+
+  #email,
+  #subject,
+  #message {
+    margin-bottom: 16px;
+  }
+
+  input[type=submit] {
+    width: 50%;
+  }
+}
+
+/* Footer Section */
 #footer {
   background: #230b00;
   padding: 20px;
@@ -397,6 +510,12 @@ input[type=submit]:hover {
   line-height: 2;
 }
 
+@media screen and (max-width: 576px) {
+  #footer h3 {
+    font-size: 1rem;
+  }
+}
+
 .footer-text {
   color: #fff;
   font: normal 12px "roboto", sans-serif;
@@ -405,3 +524,31 @@ input[type=submit]:hover {
   padding: 0;
   margin: 0;
 }
+
+/* Unused styles from previous iteration */
+.brainfood-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+/*Note: Above .brainfood-container was replaced by bootstrap .row, and is no longer used in the html. Left the style just as a note*/
+/*Note: Default width is always 100% width of the viewer*/
+/*Note: If you wanted to have equal space on sides and in gaps, you could define all as grid columns, combining fractions and/or percentages, px, etc./
+/*Note: Grid-gap property may overflow contents off screen*/
+.mentorships-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 0 100px 50px 100px;
+}
+
+/*Note: Justify-Items is a parent property container that will justify cell contents along row axis: start, center, end. It will only have an effect if there is free space inside the cell. These cells are full, so property has no effect
+/*Note: Justify-content property adjust remaining space around the grid items; Space-evenly value flushes the furthest left and right items against the border. Neither properties have any affect because the cells are full and there is no additional space*/
+.mentorships-grid {
+  width: 90%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*Note: Width property here is being applied to the child cell to create a gap. You need to set the margin on left and right though to center the image*/
+/*Q: HOW CAN I FORMAT THIS AS A SQUARE*/

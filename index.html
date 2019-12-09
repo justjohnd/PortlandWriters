@@ -5,27 +5,57 @@
   <meta charset="utf-8">
   <!--color pallette: https://colorhunt.co/palette/145229-->
   <title>Portland Young Writers Workshops</title>
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="icon" href="css/favicon.ico">
   <script src="https://kit.fontawesome.com/9c06cf3645.js" crossorigin="anonymous"></script>
   <link href="https://fonts.googleapis.com/css?family=Ibarra+Real+Nova|Indie+Flower&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
 
-  <nav>
-    <div class="header-left">
-      <img class="logo" src="images/book-logo.png" alt="book-logo">
-      <h1 class="title"><a class="title" href="#">Portland Young Writers Workshops</a>
-      </h1>
-    </div>
-    <ul>
-      <li><a href="#mentorships">Mentorships</a></li>
-      <li><a href="#about-seth">About Seth</a></li>
-      <li><a href="#rates">Rates</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
+  <section id="title">
+      <nav class="navbar navbar-expand-lg fixed-top navbar-light">
+        <div class="header-left">
+          <a class="navbar-brand logo" href="#title"><img class="logo" src="images/book-logo.png" alt="book-logo">
+          </a>
+          <a class="title-header" href="#title"><h1 class="title-header">PORTLAND YOUNG WRITERS WORKSHOPS</h1></a>
+      </div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!--navbar-toggler used to collapse the menu behind a button-->
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" id="menu" href="#mentorships">mentorships</a>
+            </li>
+          </ul>
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" id="menu" href="#about-seth">about seth</a>
+            </li>
+          </ul>
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" id="menu" href="#rates">rates</a>
+            </li>
+          </ul>
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" id="menu" href="#contact">contact</a>
+            </li>
+          </ul>
+      </nav>
+  </section>
+
+
 
   <!--Intro-->
   <main>
@@ -38,27 +68,27 @@
       </a>
     </button>
 
-    <section class="large-text-area">
-      <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
+    <section class="container-fluid">
+      <p class="text-fluid">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
         laudantium.
     </section>
     <hr />
-    <section class="brainfood">
-      <h1 class="brainfood-header">Give Your Kid the Brain Food They Need</h1>
-      <div class="brainfood-container">
-        <div class="features-column">
+    <section class="container-fluid">
+      <h1 class="section-heading">Give Your Kid the Brain Food They Need</h1>
+      <div class="row">
+        <div class="col-lg-4 features-column">
           <i class="fab fa-empire fa-4x icon-color"></i>
           <h3 class="feature-title">Unlock the Imagination</h3>
           <p class="feature-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
           </p>
         </div>
-        <div class="features-column">
+        <div class="col-lg-4 features-column">
           <i class="fas fa-book-open fa-4x icon-color"></i>
           <h3 class="feature-title">Write Original Scripts, Stories, and Plays</h3>
           <p class="feature-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
           </p>
         </div>
-        <div class="features-column">
+        <div class="col-lg-4 features-column">
           <i class="fas fa-brain fa-4x icon-color"></i>
           <h3 class="feature-title">Strengthen Creative Neuropathways</h3>
           <p class="feature-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -67,44 +97,41 @@
     </section>
 
     <!--Mentorships-->
-    <section class="paper-background" id="mentorships">
+    <section class="container-fluid paper-background" id="mentorships">
       <h1 class="section-heading">Personalized Mentorships for One or Two Students</h1>
-      <p class="mentorships-text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+      <p class="text-fluid">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
         Nemo enim ipsam
         voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.<br /><br />
         Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
         Nemo enim ipsam
         voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
       </p>
-      <div class="mentorships-container">
-        <div>
-          <img class="mentorships-grid image-writing" src="images/writing.jpg" alt="child-writing">
+      <div class="row">
+        <div class="col-lg-4">
+          <img class="image-mentorship image-writing" src="images/writing.jpg" alt="child-writing">
         </div>
-        <div>
-          <img class="mentorships-grid" src="images/student-board.jpg" alt="child-writing">
+        <div class="col-lg-4">
+          <img class="image-mentorship" src="images/student-board.jpg" alt="child-writing">
         </div>
-        <div>
-          <img class="mentorships-grid" src="images/child.jpg" alt="child-writing">
+        <div class="col-lg-4">
+          <img class="image-mentorship" src="images/child.jpg" alt="child-writing">
         </div>
       </div>
     </section>
 
     <!--About Seth-->
-    <section id="about-seth">
+    <section class="container-fluid" id="about-seth">
       <img class="about-seth-image" src="images/seth.jpg" alt="">
       <h1 class="section-heading">ABOUT SETH</h1>
       <p> Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum
         exercitationem ullam corporis suscipit laboriosam.
       </p>
     </section>
-    <hr class="hr-padding" />
-    <section id="rates">
+    <section class="container-fluid" id="rates">
       <div class="rates-container">
-        <div class="rates-grid-margin">
-        </div>
         <div class="rates-grid-a">
           <h1 class="section-heading">Class Information and Rates</h1>
-          <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum
+          <p class="text-fluid">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum
             exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid.<br /><br />
             Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum.
           </p>
@@ -125,19 +152,21 @@
           <p class="rates-text">One-student tuition: $XXX</p>
         </div>
       </div>
-      <div class="rates-grid-margin">
-      </div>
     </section>
-    <section class="paper-background" id="contact">
+    <section class="container-fluid paper-background" id="contact">
       <h1 class="section-heading">Please Contact for Enquiries or a Free Consultation!</h1>
       <form action="mailto:justjohnd@gmail.com" method="post">
-        <dev class="form-container">
-          <input type="text" id="input-name" placeholder="Name">
-          <input type="email" id="input-email" placeholder="Email address">
-          <input type="text" id="input-subject" placeholder="Subject">
-          <textarea name="message" type="text" id="input-message" placeholder="Message"></textarea>
-          <input type="submit" value="Submit" id="input-submit">
-        </dev>
+        <div class="form-group form-group-50-50">
+          <input type="text" id="name" class="form-control" placeholder="Name">
+          <input type="email" id="email" class="form-control" placeholder="Email address">
+        </div>
+        <div>
+          <input type="text" id="subject" class="form-control form-group" placeholder="Subject">
+        </div>
+        <div>
+          <textarea id="message" name="message" type="text" class="form-control form-group" placeholder="Message"></textarea>
+        </div>
+        <input type="submit" value="Submit" id="input-submit">
       </form>
     </section>
   </main>
