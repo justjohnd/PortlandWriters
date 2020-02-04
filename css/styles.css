@@ -1,3 +1,5 @@
+/**Git test**/
+
 html {
   scroll-padding-top: 54px;
 }
@@ -35,7 +37,7 @@ hr {
   background: #b3b3b3;
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 992px) {
   hr {
     width: 20%;
   }
@@ -54,6 +56,13 @@ hr-padding {
 .section-heading {
   font-size: 2rem;
   padding-bottom: 16px;
+}
+
+@media screen and (max-width: 992px) {
+  .section-heading {
+    font-size: 4rem;
+    margin: 32px 0 0 0;
+  }
 }
 
 .container-fluid.section-heading {
@@ -80,6 +89,14 @@ hr-padding {
 .text-fluid {
   padding: 0 10%;
   text-align: justify;
+}
+
+@media screen and (max-width: 992px) {
+  .text-fluid {
+    padding: 0;
+    text-align: justify;
+    font-size: 36px;
+  }
 }
 
 /* Navigation Section */
@@ -120,14 +137,20 @@ hr-padding {
   margin: -5px;
 }
 
-@media screen and (max-width: 700px) {
-  .logo {
-    display: none;
+@media screen and (max-width: 992px) {
+  .title-header {
+    font-size: 24px;
   }
 }
 
 .logo {
   width: 125px;
+}
+
+@media screen and (max-width: 700px) {
+  .logo {
+    display: none;
+  }
 }
 
 #menu {
@@ -155,17 +178,17 @@ main {
   background-repeat: no-repeat;
 }
 
-@media screen and (max-width: 992px) {
+@media (min-width: 768px) and (max-width: 992px) {
   .hero {
     background-image: url("../images/hero.jpg");
-    height: 450px;
-    background-size: 150%;
-    background-position: 55% top;
+    height: 580px;
+    background-size: 220%;
+    background-position: 54% top;
     background-repeat: no-repeat;
   }
 }
 
-@media screen and (max-width: 768px) {
+@media (min-width: 576px) and (max-width: 768px) {
   .hero {
     background-image: url("../images/hero.jpg");
     height: 420px;
@@ -195,16 +218,16 @@ main {
   font-size: 70px;
 }
 
-@media screen and (max-width: 992px) {
+@media (min-width: 768px) and (max-width: 992px) {
   .hero-text {
     color: #fff;
     text-align: center;
     text-shadow: 0 0 3px rgba(0, 0, 0, 0.9);
-    padding: 35% 0;
+    padding: 8% 0;
     line-height: 1.4;
-    font-weight: 700;
+    font-weight: 900;
     font-family: 'Indie Flower';
-    font-size: 66px;
+    font-size: 0;
   }
 }
 
@@ -217,7 +240,7 @@ main {
     line-height: 1.4;
     font-weight: 700;
     font-family: 'Indie Flower';
-    font-size: 66px;
+    font-size: 0;
   }
 }
 
@@ -230,7 +253,7 @@ main {
     line-height: 1.4;
     font-weight: 700;
     font-family: 'Indie Flower';
-    font-size: 64px;
+    font-size: 0;
   }
 }
 
@@ -261,6 +284,15 @@ main {
   font-weight: 700;
 }
 
+@media screen and (max-width: 992px) {
+  .cta-text {
+    font-size: 40px;
+    padding: 18px;
+    text-decoration: none;
+    font-weight: 700;
+  }
+}
+
 /* Brain Food Section */
 .features-column {
   padding: 16px;
@@ -268,6 +300,12 @@ main {
 
 /*Note: Add padding or margins the grid to add space around the contents*/
 /*Width: will compress everything into the specified width, overriding the value in the grid-template-columns property*/
+@media screen and (max-width: 992px) {
+  .features-column {
+    padding: 32px;
+  }
+}
+
 .icon-color {
   color: rgb(201, 35, 6, 0.8);
   margin-bottom: 1rem;
@@ -282,11 +320,28 @@ main {
   line-height: 1.2;
 }
 
+@media screen and (max-width: 992px) {
+  .feature-title {
+    font-size: 2rem;
+    line-height: 1.2;
+    padding: 0 10%;
+  }
+}
+
 .feature-text {
   color: #8f8f8f;
   margin: 0;
   font-size: 1rem;
   padding: 0 20%;
+}
+
+@media screen and (max-width: 992px) {
+  .feature-text {
+    color: #8f8f8f;
+    margin: 0;
+    font-size: 1.8rem;
+    padding: 0 20%;
+  }
 }
 
 /* Mentorships Section */
@@ -313,14 +368,14 @@ main {
 .about-seth-image {
   width: 50%;
   padding: 0 60px 0 0;
-  float: left;
+  float: right;
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 992px) {
   .about-seth-image {
     width: 100%;
     padding: 0;
-    margin: 16px 0 32px 0;
+    margin: 34px 0 32px 0;
     float: none;
   }
 }
@@ -337,12 +392,18 @@ main {
   clear: left;
 }
 
+@media screen and (max-width: 992px) {
+  #rates.container-fluid {
+    padding: 0 10% 5% 10%;
+  }
+}
+
 .rates-container {
   display: grid;
   grid-template-columns: auto 40px 360px;
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 992px) {
   .rates-container {
     display: block;
   }
@@ -357,12 +418,24 @@ main {
   color: rgb(201, 35, 6, 0.8);
 }
 
+@media screen and (max-width: 992px) {
+  .rates-grid-a h1 {
+    font-size: 3.5rem;
+  }
+}
+
 .rates-grid-a p {
   text-align: left;
   font-style: regular;
   line-height: 1.4;
   font-size: 19px;
   color: #262626;
+}
+
+@media screen and (max-width: 992px) {
+  .rates-grid-a p {
+    font-size: 36px;
+  }
 }
 
 @media screen and (max-width: 576px) {
@@ -416,13 +489,6 @@ form {
   text-align: left;
 }
 
-@media screen and (max-width: 576px) {
-  form {
-    padding: 0;
-    text-align: center;
-  }
-}
-
 .form-control {
   width: 100%;
 }
@@ -432,12 +498,6 @@ form {
   border: 1px solid #ccc;
   border-radius: 4px;
   font-family: "Noto sans", sans-serif;
-}
-
-@media screen and (max-width: 576px) {
-  .form-group {
-    margin-bottom: 0;
-  }
 }
 
 .form-group-50-50 {
@@ -450,12 +510,6 @@ form {
 
 .form-group-50-50 .form-control:last-child {
   margin-right: 0;
-}
-
-@media screen and (max-width: 576px) {
-  .form-group-50-50 {
-    display: block;
-  }
 }
 
 input[type=submit] {
@@ -473,7 +527,7 @@ input[type=submit]:hover {
   ;
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 992px) {
   input {
     margin-bottom: 16px;
   }
