@@ -84,6 +84,7 @@ hr-padding {
   text-align: center;
   background-image: url("../images/paperResized.jpg");
   height: auto;
+  background-size: 100%;
 }
 
 /* Note: Background-size: cover is not necessary. Applying this size will cause the image to distort as screen size changes.*/
@@ -114,12 +115,17 @@ hr-padding {
   background-color: #fff;
 }
 
+@media screen and (max-width: 992px) {
+  .navbar-nav {
+    font-size: 3rem;
+  }
+}
+
 .header-left {
   display: flex;
   align-items: center;
 }
 
-/*Q: Why does display: flex put .header-left items inline, but display: inline does not*/
 @media screen and (max-width: 700px) {
   .header-left {
     width: 80%;
@@ -549,98 +555,6 @@ main {
   }
 }
 
-/*Contact Section*/
-form {
-  padding: 0 100px;
-  text-align: left;
-}
-
-@media screen and (max-width: 992px) {
-  form {
-    padding: 0;
-  }
-}
-
-.form-control {
-  width: 100%;
-}
-
-@media screen and (max-width: 992px) {
-  .form-control {
-    font-size: 2rem;
-  }
-}
-
-.form-group {
-  margin-bottom: 16px;
-  border-radius: 4px;
-  font-family: "Noto sans", sans-serif;
-}
-
-.form-group-50-50 {
-  display: flex;
-}
-
-.form-group-50-50 .form-control {
-  margin-right: 16px;
-}
-
-.form-group-50-50 .form-control:last-child {
-  margin-right: 0;
-}
-
-@media screen and (max-width: 992px) {
-  .form-group-50-50 .form-control {
-    margin-right: 40px;
-  }
-}
-
-@media screen and (max-width: 992px) {
-  .form-group-50-50 .form-control:last-child {
-    margin-right: 0;
-  }
-}
-
-input[type=submit] {
-  width: 20%;
-  background-color: #f58b54;
-  color: white;
-  padding: 12px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-@media screen and (max-width: 992px) {
-  input[type=submit] {
-    font-size: 2rem;
-  }
-}
-
-input[type=submit]:hover {
-  background-color: rgb(201, 35, 6, 0.8);
-  ;
-}
-
-@media screen and (max-width: 576px) {
-  .form-control .form-group {
-    margin-bottom: 16px;
-  }
-}
-
-@media screen and (max-width: 576px) {
-
-  #email,
-  #subject,
-  #message {
-    margin-bottom: 16px;
-  }
-
-  input[type=submit] {
-    width: 50%;
-  }
-}
-
 /* Footer Section */
 #footer {
   background: #230b00;
@@ -672,31 +586,3 @@ input[type=submit]:hover {
   .footer-text {
     font-size: 32px;
   }
-
-/* Unused styles from previous iteration */
-.brainfood-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-}
-
-/*Note: Above .brainfood-container was replaced by bootstrap .row, and is no longer used in the html. Left the style just as a note*/
-/*Note: Default width is always 100% width of the viewer*/
-/*Note: If you wanted to have equal space on sides and in gaps, you could define all as grid columns, combining fractions and/or percentages, px, etc./
-/*Note: Grid-gap property may overflow contents off screen*/
-.mentorships-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  padding: 0 100px 50px 100px;
-}
-
-/*Note: Justify-Items is a parent property container that will justify cell contents along row axis: start, center, end. It will only have an effect if there is free space inside the cell. These cells are full, so property has no effect
-/*Note: Justify-content property adjust remaining space around the grid items; Space-evenly value flushes the furthest left and right items against the border. Neither properties have any affect because the cells are full and there is no additional space*/
-.mentorships-grid {
-  width: 90%;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/*Note: Width property here is being applied to the child cell to create a gap. You need to set the margin on left and right though to center the image*/
-/*Q: HOW CAN I FORMAT THIS AS A SQUARE*/
