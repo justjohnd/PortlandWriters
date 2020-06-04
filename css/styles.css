@@ -1,16 +1,14 @@
-/*Colors
- #b3b3b3: hr
+/*Colors and Fonts
+Colors
+#b3b3b3: hr
   : filter, footer
 rgb(201, 35, 6, 0.8): cta
 #f58b54: hover
- menu: #262626
- Blog Title: #0093b2;
+body: #262626
+blog title: #0093b2;
 
- Fonts:
+Fonts:
 p: 'opens sans', sans-serif
-
-
-
 */
 
 html {
@@ -24,9 +22,9 @@ body {
   margin: 0;
   scroll-padding-top: 54px;
 }
-
 /**Note: Box-sizing: This property controls the box-model used by browser. Border-box will cause the width and height of all element containers to adjust to include borders and padding. Good general rule to set this property universally***/
 /*Note: Default padding is 0*/
+
 p {
   font-family: 'Open Sans',
   sans-serif;
@@ -54,30 +52,6 @@ h6 {
   font-weight: 900;
   padding: 0;
   margin: 0;
-}
-
-.first-hr {
-  width: 40%;
-  height: 1px;
-  border: 0;
-  margin: 2rem auto 0 auto;
-  background: #b3b3b3;
-}
-
-@media screen and (max-width: 992px) {
-  .first-hr {
-    width: 40%;
-    margin-top: 3rem;
-  }
-}
-
-hr-padding {
-  width: 80%;
-  height: 1px;
-  border: 0;
-  margin: 0 auto;
-  background: #b3b3b3;
-  margin: 30px;
 }
 
 /* Headings */
@@ -226,6 +200,7 @@ hr-padding {
 /* Main */
 main {
   margin-top: 54px;
+  overflow: hidden;
 }
 
 /* Intro Sections */
@@ -344,12 +319,14 @@ main {
   position: absolute;
   top: 85%;
   left: 5%;
+  z-index: 100;
 }
 
 .btn-register {
   position: absolute;
   top: 85%;
   right: 5%;
+  z-index: 100;
 }
 
 
@@ -382,6 +359,22 @@ main {
     padding: 18px;
     text-decoration: none;
     font-weight: 700;
+  }
+}
+
+/*Intro Section*/
+.first-hr {
+  width: 40%;
+  height: 1px;
+  border: 0;
+  margin: 2rem auto 0 auto;
+  background: #b3b3b3;
+}
+
+@media screen and (max-width: 992px) {
+  .first-hr {
+    width: 40%;
+    margin-top: 3rem;
   }
 }
 
