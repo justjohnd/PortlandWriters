@@ -137,6 +137,12 @@ h6 {
 }
 
 @media screen and (max-width: 992px) {
+  .navbar {
+    padding: 20px;
+  }
+}
+
+@media screen and (max-width: 992px) {
   .navbar-nav {
     font-size: 3rem;
   }
@@ -145,6 +151,7 @@ h6 {
 .header-left {
   display: flex;
   align-items: center;
+  justify-content: flex-start;
 }
 
 @media screen and (max-width: 700px) {
@@ -178,7 +185,13 @@ h6 {
 
 @media screen and (max-width: 992px) {
   .title-header {
-    font-size: 1.8rem;
+    font-size: 3.5rem;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .navbar-toggler {
+    font-size: 3rem;
   }
 }
 
@@ -192,7 +205,7 @@ h6 {
   }
 }
 
-#menu {
+.menu {
   color: #262626;
   font-family: 'Ibarra Real Nova', serif;
 }
@@ -386,7 +399,6 @@ main {
 }
 
 /* Icons Section */
-
 .icon {
   padding: 0 0 5% 0;
 }
