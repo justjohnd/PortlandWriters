@@ -136,6 +136,10 @@ h6 {
 
 }
 
+.navbar-light .navbar-nav .nav-link {
+  color: #262626;
+}
+
 @media screen and (max-width: 992px) {
   .navbar {
     padding: 20px;
@@ -183,6 +187,7 @@ h6 {
   font-weight: 400;
 }
 
+/*
 @media screen and (max-width: 992px) {
   .title-header {
     font-size: 3.5rem;
@@ -195,15 +200,20 @@ h6 {
   }
 }
 
+*/
+
 .logo {
   width: 125px;
 }
 
+/*
 @media screen and (max-width: 700px) {
   .logo {
     display: none;
   }
 }
+
+*/
 
 .menu {
   color: #262626;
@@ -335,11 +345,23 @@ main {
   z-index: 100;
 }
 
+@media screen and (max-width: 576px) {
+    .btn-video {
+      display: none;
+    }
+  }
+
 .btn-register {
   position: absolute;
   top: 85%;
   right: 5%;
   z-index: 100;
+}
+
+@media screen and (max-width: 576px) {
+  .btn-register {
+    display: none;
+  }
 }
 
 
@@ -506,7 +528,11 @@ main {
 }
 
 #rates .row {
-  padding-top: 5%
+  padding-top: 5%;
+}
+
+#rates .image-container {
+  height: 100%;
 }
 
 .image-mentorship {
@@ -540,7 +566,7 @@ main {
   font: normal 14px "roboto", sans-serif;
   line-height: 1.2;
   font-weight: 500;
-  padding: 0;
+  padding: 15px;
   margin: 0;
 }
 
