@@ -240,16 +240,13 @@ main {
   transform: translate(-50%, -50%);
 }
 
-@media (min-width: 768px) and (max-width: 992px) {
+/*
+@media (max-width: 768px) {
   .hero-text {
     color: #fff;
     text-align: center;
     text-shadow: 0 0 3px rgba(0, 0, 0, 0.9);
     padding: 8% 0;
-    line-height: 1.4;
-    font-weight: 900;
-    font-family: 'Indie Flower';
-    font-size: 0;
   }
 }
 
@@ -278,6 +275,8 @@ main {
     font-size: 0;
   }
 }
+
+*/ 
 
 /*Hero-Carousel Section */
 .carousel-item {
