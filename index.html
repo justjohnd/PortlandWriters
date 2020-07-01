@@ -7,11 +7,7 @@
   <title>Young Writers Workshops | Write with Me</title>
 
   <!--Favicon, Fontawesome, Google fonts-->
-  <link rel="icon" href="css/favicon.ico">
-  <script src="https://kit.fontawesome.com/9c06cf3645.js" crossorigin="anonymous"></script>
   <link href="https://fonts.googleapis.com/css?family=Ibarra+Real+Nova|Indie+Flower&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Chelsea+Market&display=swap"
-    rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap"
     rel="stylesheet">
 
@@ -24,33 +20,25 @@
 
 <body>
   <section id="title">
-    <nav class="navbar navbar-expand-lg fixed-top navbar-light">
-      <div class="header-left">
-        <a href="#title"><img class="logo" src="images/book-logoResized.jpg" alt="book-logo">
+    <nav class="navbar navbar-expand-sm fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#title">
+          <h1>Write with Me</h1>
         </a>
-        <a class="title-header" href="#title">
-          <h1 class="title-header">Write with Me</h1>
-        </a>
-      </div>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      <button class="navbar-toggler navbar-light" type="button" data-toggle="collapse" data-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <!--navbar-toggler used to collapse the menu behind a button-->
-      <div class="collapse navbar-collapse menu" id="navbarNav">
+      <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
-            <a class="nav-link" href="#about-seth" >about seth</a>
+            <a class=" menu nav-link" href="#about-seth" >about seth</a>
           </li>
-        </ul>
-        <ul class="navbar-nav">
           <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
-            <a class="nav-link" href="#rates">rates</a>
+            <a class="menu nav-link" href="#rates">rates</a>
           </li>
-        </ul>
-        <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link"
+            <a class="menu nav-link"
               href="https://docs.google.com/forms/d/e/1FAIpQLSfZlfetIOEOKngXdG4dIxf1YV0h0Z2YtYc-jRJjbL4acu4Y9w/viewform?usp=sf_link">contact</a>
           </li>
         </ul>
@@ -61,6 +49,7 @@
           </li>
         </ul>
       -->
+      </div>
       </div>
     </nav>
   </section>
@@ -96,17 +85,18 @@
 
         <!--Hero Title and buttons-->
         <h1 class="hero-text">Young Writers Workshops</h1>
-        <a class="btn-video d-sm-none btn" href="#video">WATCH VIDEO</a>
-        <a class="btn-register d-sm-none btn"
+        <a class="btn-video d-sm-none d-md-block btn" href="#video">WATCH VIDEO</a>
+        <a class="btn-register d-sm-none d-md-block btn"
           href="https://docs.google.com/forms/d/e/1FAIpQLSfZlfetIOEOKngXdG4dIxf1YV0h0Z2YtYc-jRJjbL4acu4Y9w/viewform?usp=sf_link">SIGN
           UP</a>
       </div>
     </section>
 
     <!--Intro-->
-    <section class="intro container-fluid">
+    <section class="container-fluid">
       <p class="text-fluid">Hi, my name is Seth. I mentor children and young adults through insane, funny, dreamy,
-        scary, and beautiful stories that we write together.
+        scary, and beautiful stories that we write together. We start by looking for patterns within texts, then shape a
+        plot that we write together.
         <br></br>
         Classes are held on Google Meet and based out of Portland, Oregon. Remote learning allows for multiple time
         zones. Let’s connect from across the world!
@@ -122,24 +112,22 @@
       allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
     <!-- Icons Section -->
-    <section class="icon paper-background">
-      <h1 class="section-heading workshop">Why a Workshop for Kids?</h1>
+    <section class="container-workshops">
+      <h1 class="section-heading">Why a Workshop for Kids?</h1>
       <div class="row">
         <div class="col-lg-4 features-column">
-          <i class="fas fa-child fa-10x icon-color"></i>
           <h3 class="feature-title">Collaboration Through Connection</h3>
           <p class="feature-text">Young-authors create authentic work that serves the child’s creative spirit while developing school readiness. We compete against the work itself, not for praise or a grade.
         </div>
         <div class="col-lg-4 features-column">
-          <i class="fas fa-book-open fa-10x icon-color"></i>
           <h3 class="feature-title">Complexity + Rigor + Depth</h3>
-          <p class="feature-text">Students learn about classical story structure, internal logic, setting and transitions, escalating events, choice and discovery, protagonist vs. antagonist, defining stakes, characterization, theme, genre, point of view, and on and on and
-          on...
+          <p class="feature-text">Students learn about classical story structure, internal logic, setting, choice +
+            discovery, protagonist vs. antagonist, defining stakes, characterization, theme, genre, point of view, and
+            so on...
           </p>
         </div>
         <div class="col-lg-4 features-column">
-          <i class="fas fa-brain fa-10x icon-color"></i>
-          <h3 class="feature-title">Learn to Think Critically</h3>
+          <h3 class="feature-title">Learn To Think Critically</h3>
           <p class="feature-text">The mechanics of storytelling structure our histories, beliefs, and cultures. They enrich our inner lives. Children develop empathy through higher-level thinking.
           </p>
         </div>
@@ -159,8 +147,15 @@
       <img class="about-seth-image" src="images/sethProfileRS.jpg" alt="">
       <p class="text-fluid">I love what I do. Most recently I taught second grade for seven years at Richmond
         Elementary, a dual language Japanese
-        immersion program. My approach with students is relational: I flex pedagogy with the child’s nuanced educational and emotional needs within the moment. When not teaching throughout Portland Public Schools or mentoring young writers, I’m busy making stories.</p>
+        immersion program. My approach with students is relational. I work to understand a student’s nuanced educational
+        and emotional needs. When not teaching throughout Portland Public Schools or mentoring young writers, I’m busy
+        making stories.</p>
       <br></br>
+      <p class="text-fluid"><strong>FUN FACTS</strong></p>
+      <p class="text-fluid fun-facts degrees">Floridian--Drummer--Media Creator--Terrible Speller--Favorite Dane: Soren Kierkegaard
+      </p>
+      <br></br>
+
       <p class="text-fluid"><strong>Degrees and Licensure</strong></p>
       <ul>
       <li class="li-degrees">
@@ -179,7 +174,7 @@
     </section>
 
     <!--Rates-->
-    <section class="paper-background" id="rates">
+    <section class="rates-background" id="rates">
       <div class="container-fluid">
         <h1 class="section-heading">Class Information and Rates</h1>
         <p class="text-fluid">Classes are one hour online. Students need only a notebook and pencil to begin. We start by developing a lexicon of story language, then shape a plot that we write together.
