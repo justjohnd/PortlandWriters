@@ -45,16 +45,9 @@
     padding: 5% 10%;
   }
 
-  @media screen and (max-width: 992px) {
-    .container-fluid {
-      padding-left: 3%;
-      padding-right: 3%;
-    }
-  }
-
   .text-fluid {
     padding: 0 10%;
-    text-align: justify;
+    text-align: left;
   }
 
   /* Buttons */
@@ -301,10 +294,6 @@
     }
   }
 
-  .fun-facts {
-    text-align: left;
-  }
-
   #about-seth h1 {
     text-align: center;
     padding-bottom: 2rem;
@@ -325,10 +314,6 @@
     width: 40%
   }
 
-  .degrees {
-    font-size: 1rem;
-    line-height: 1.4;
-  }
 
   .li-degrees {
     margin: 5px 0;
@@ -520,10 +505,16 @@
     line-height: 1.5em;
   }
 
-    @media screen and (max-width: 992px) {
-      .text-fluid,
-      .degrees {
-        font-size: 2rem;
+    @media screen and (max-width: 992px) { 
+         .container-fluid {
+           padding-left: 3%;
+           padding-right: 3%;
+         }
+      
+      .text-fluid {
+        font-size: 2.5rem;
+        padding: 0 5%;
+        text-align: left;
       }
 
       .feature-text {
