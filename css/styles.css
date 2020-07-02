@@ -66,18 +66,6 @@
 
   }
 
-  @media screen and (max-width: 992px) {
-    .navbar {
-      padding: 1rem 0;
-    }
-  }
-
-  @media screen and (max-width: 992px) {
-    .navbar-toggler {
-      font-size: 2rem;
-    }
-  }
-
 
   .menu {
     color: #262626;
@@ -257,12 +245,6 @@
 
   .features-column {
     padding: 16px;
-  }
-
-  @media screen and (max-width: 992px) {
-    .features-column {
-      padding: 32px;
-    }
   }
 
   .feature-text {
@@ -505,33 +487,63 @@
     line-height: 1.5em;
   }
 
-    @media screen and (max-width: 992px) { 
-         .container-fluid {
-           padding-left: 3%;
-           padding-right: 3%;
-         }
-      
-      .text-fluid {
-        font-size: 2.5rem;
-        padding: 0 5%;
-        text-align: left;
-      }
+  @media screen and (max-width: 992px) {
 
-      .feature-text {
-        font-size: 1.75rem;
-        padding: 0 20%;
-      }
-
-      .h1 {
-        font-size: 3rem;
-        font-weight: 700;
-        margin-bottom: 2rem;
-      }
-
-      .h4 {
-        font-size: 2.5rem;
-        font-weight: 700;
-        padding: 0 15rem;
-      }
-
+    .navbar {
+      padding: 3rem
     }
+
+    .navbar-toggler {
+      font-size: 4rem;
+    }
+
+    .container {
+      max-width: 100%;
+    }
+
+    main {
+      margin-top: 180px;
+      overflow: hidden;
+    }
+
+    p {
+      font-size: 2.5rem;
+    }
+    
+    .title-font {
+      font-size: 3.25rem;
+    }
+
+    .container-fluid {
+      padding-left: 3%;
+      padding-right: 3%;
+    }
+
+    .text-fluid {
+      font-size: 2.5rem;
+      padding: 0 5%;
+      text-align: left;
+    }
+
+    .h1 {
+      font-size: 4rem;
+      font-weight: 700;
+      margin-bottom: 2rem;
+    }
+
+    .h4 {
+      font-size: 3.5rem;
+      font-weight: 700;
+      padding: 0 10rem;
+    }
+
+    .features-column {
+      padding: 32px;
+      margin-bottom: 2rem;
+    }
+
+    .feature-text {
+      font-size: 2.5rem;
+      padding: 0 15%;
+    }
+  }
