@@ -501,6 +501,10 @@
       max-width: 100%;
     }
 
+    .menu {
+      font-size: 3rem;
+    }
+
     main {
       margin-top: 180px;
       overflow: hidden;
@@ -509,7 +513,7 @@
     p {
       font-size: 2.5rem;
     }
-    
+
     .title-font {
       font-size: 3.25rem;
     }
