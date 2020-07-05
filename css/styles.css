@@ -1,6 +1,6 @@
-  html {
+  /* html {
     scroll-padding-top: 54px;
-  }
+  } */
 
   body {
     box-sizing: border-box;
@@ -41,13 +41,54 @@
     margin: 0 auto;
   }
 
+  .container {
+    margin: 1rem 0;
+  }
+
+
+  .perfect-scroll::before {
+    display: block;
+    content: " ";
+    margin-top: -180px;
+    height: 180px;
+    visibility: hidden;
+    pointer-events: none;
+  }
+
+
   /*Containers*/
   .container-fluid {
-    padding: 5% 10%;
+    padding: 10% 15%;
+    text-align: left;
+  }
+
+  .container-fluid-center {
+    padding: 10% 15%;
+    text-align: center;
+  }
+
+  .container-workshop {
+    text-align: center;
+    padding: 10% 0%;
+  }
+
+  /* Note: Background-size: cover is not necessary. Applying this size will cause the image to distort as screen size changes.*/
+  .container-workshop p {
+    font-weight: 500;
+  }
+
+  .container-wide {
+    text-align: center;
+    padding: 10% 5%;
+  }
+
+  .container-paper {
+    background-image: url("../images/paperResized.jpg");
+    background-size: 100%;
   }
 
   .text-fluid {
-    padding: 0 10%;
+    padding: 1% 10%;
     text-align: left;
   }
 
@@ -75,8 +116,7 @@
 
   /* Main */
   main {
-    margin-top: 54px;
-    overflow: hidden;
+    padding-top: 5rem;
   }
 
   /* Intro Sections */
@@ -93,7 +133,7 @@
     transform: translate(-50%, -50%);
   }
 
-  /*Hero-Carousel Section */
+  /* Hero-Carousel Section */
   .carousel-item {
     height: 85vh;
     position: relative;
@@ -129,23 +169,6 @@
     display: block;
   }
 
-  @media (min-width: 768px) and (max-width: 992px) {
-    .carousel-item {
-      height: 580px;
-    }
-  }
-
-  @media (min-width: 576px) and (max-width: 768px) {
-    .carousel-item {
-      height: 420px;
-    }
-  }
-
-  @media screen and (max-width: 576px) {
-    .carousel-item {
-      height: 420px;
-    }
-  }
 
   .carousel-image {
     width: 100%;
@@ -189,36 +212,19 @@
     font-weight: 700;
   }
 
-  @media screen and (max-width: 992px) {
-    .cta-text {
-      font-size: 2rem;
-      padding: 18px;
-      text-decoration: none;
-      font-weight: 700;
-    }
-  }
-
   /*Intro Section*/
   .first-hr {
     width: 40%;
     height: 1px;
     border: 0;
-    margin: 2rem auto 0 auto;
     background: #b3b3b3;
   }
 
-  @media screen and (max-width: 992px) {
-    .first-hr {
-      width: 40%;
-      margin-top: 3rem;
-    }
-  }
-
   /*Video*/
-  #video {
+
+  .video-style {
     width: 600px;
     height: 325px;
-    margin-bottom: 50px;
   }
 
   .shadow {
@@ -232,17 +238,6 @@
 
 
   /* Workshops Section */
-  .container-workshops {
-    text-align: center;
-    background-image: url("../images/paperResized.jpg");
-    background-size: 100%;
-    padding: 3rem 0;
-  }
-
-  /* Note: Background-size: cover is not necessary. Applying this size will cause the image to distort as screen size changes.*/
-  .container-workshops p {
-    font-weight: 500;
-  }
 
   .features-column {
     padding: 16px;
@@ -257,8 +252,8 @@
   }
 
   /* About Seth Section */
-  #about-seth {
-    padding: 5% 7%;
+  #about-seth.h1 {
+    padding-bottom: 1rem;
   }
 
   .about-seth-image {
@@ -268,24 +263,9 @@
     float: right;
   }
 
-  @media screen and (max-width: 992px) {
-    .about-seth-image {
-      width: 100%;
-      padding: 0;
-      margin: 12px 0 32px 0;
-      float: none;
-    }
-  }
-
   #about-seth h1 {
     text-align: center;
     padding-bottom: 2rem;
-  }
-
-  @media screen and (max-width: 992px) {
-    #about-seth h1 {
-      padding-bottom: 0;
-    }
   }
 
   #about-seth p {
@@ -303,12 +283,6 @@
     text-align: left;
   }
 
-  @media screen and (max-width: 992px) {
-    .li-degrees {
-      margin: 25px 0;
-    }
-  }
-
   /* Rates */
   .rates-background {
     text-align: center;
@@ -316,11 +290,7 @@
     background-size: 100%;
   }
 
-  .container-fluid.mentorships-text {
-    padding: 0 20%;
-  }
-
-  #rates .row {
+  .row-rates {
     padding-top: 5%;
   }
 
@@ -333,43 +303,18 @@
     padding: 5%;
   }
 
-  .image-container {
-    height: 200px;
-  }
-
-  .image-writing {
-    object-fit: cover;
-    padding-bottom: 0;
-  }
-
 
   /* Footer Section */
   #footer {
     background: rgba(37, 101, 220, 0.5);
     padding: 20px;
     color: #312b2b;
+    text-align: left;
   }
 
-  @media screen and (max-width: 576px) {
-    #footer h3 {
-      font-size: 1rem;
-    }
+  #footer p {
+    font-size: 1rem;
   }
-
-  .footer-text {
-    font: normal 14px "roboto", sans-serif;
-    line-height: 1.2;
-    font-weight: 500;
-    padding: 15px;
-    margin: 0;
-  }
-
-  @media screen and (max-width: 992px) {
-    .footer-text {
-      font-size: 32px;
-    }
-  }
-
 
   /*Blog*/
   #menu.nav-blog {
@@ -491,55 +436,86 @@
   @media screen and (max-width: 992px) {
 
     .navbar {
-      padding: 3rem
+      padding: 3rem;
     }
 
     .navbar-toggler {
       font-size: 4rem;
     }
 
+    .carousel-item {
+      height: auto;
+      position: static;
+    }
+
+  main {
+    padding-top: 202px;
+  }
+
     .container {
       max-width: 100%;
-    }
+    } */
 
-    .menu {
-      font-size: 3rem;
-    }
-
-    main {
-      margin-top: 180px;
-      overflow: hidden;
+  /* Universals */
+  .first-hr {
+      width: 40%;
+      margin-top: 3rem;
     }
 
     p {
       font-size: 2.5rem;
-    }
+    } 
 
-    .title-font {
-      font-size: 3.25rem;
-    }
-
-    .container-fluid {
-      padding-left: 3%;
-      padding-right: 3%;
-    }
-
-    .text-fluid {
-      font-size: 2.5rem;
-      padding: 0 5%;
-      text-align: left;
+    .perfect-scroll::before {
+      display: block;
+      content: " ";
+      margin-top: -282px;
+      height: 282px;
+      visibility: hidden;
+      pointer-events: none;
     }
 
     .h1 {
       font-size: 4rem;
       font-weight: 700;
-      margin-bottom: 2rem;
+      margin: 0 auto 2rem auto;
+      width: 95%;
     }
 
     .h4 {
       font-size: 3.5rem;
       font-weight: 700;
       padding: 0 10rem;
+    }
+
+  /*  Containers */
+  .container-fluid {
+      padding-left: 6%;
+      padding-right: 6%;
+    }
+
+    .text-fluid {
+      font-size: 2.5rem;
+      padding: 1% 5%;
+      text-align: left;
+    }
+
+  /*Main*/
+
+  .menu {
+      font-size: 3rem;
+    }
+
+
+    .title-font {
+      font-size: 3.25rem;
+    }
+
+    .cta-text {
+      font-size: 2rem;
+      padding: 18px;
+      text-decoration: none;
+      font-weight: 700;
     }
 
     .features-column {
@@ -551,4 +527,41 @@
       font-size: 2.5rem;
       padding: 0 15%;
     }
+
+    #about-seth h1 {
+      padding-bottom: 0;
+    }
+
+    .about-seth-image {
+      width: 100%;
+      padding: 0;
+      margin: 12px 0 32px 0;
+      float: none;
+    }
+
+    .li-degrees {
+      margin: 25px 0;
+    }
+
+    #footer {
+      height: 6rem;
+    }
+
+    #footer p {
+      font-size: 1.75rem;
+      line-height: 3;
+    }
+
   }
+
+  /* @media (min-width: 576px) and (max-width: 768px) {
+    .carousel-item {
+      height: 420px;
+    }
+  }
+
+  @media screen and (max-width: 576px) {
+    .carousel-item {
+      height: 420px;
+    }
+  } */

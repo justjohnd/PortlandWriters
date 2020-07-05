@@ -19,10 +19,10 @@
 </head>
 
 <body>
-  <section id="title">
+  <section>
     <nav class="navbar navbar-expand-lg fixed-top">
       <div class="container">
-        <a class="navbar-brand" href="#title">
+        <a class="navbar-brand" href="#hero-carousel">
           <h1 class="title-font">Write with Me</h1>
         </a>
       <button class="navbar-toggler navbar-light" type="button" data-toggle="collapse" data-target="#navbarNav"
@@ -38,7 +38,7 @@
             <a class="menu nav-link" href="#rates">rates</a>
           </li>
           <li class="nav-item">
-            <a class="menu nav-link"
+            <a class="menu nav-link" target="_blank" rel="noopener noreferrer"
               href="https://docs.google.com/forms/d/e/1FAIpQLSfZlfetIOEOKngXdG4dIxf1YV0h0Z2YtYc-jRJjbL4acu4Y9w/viewform?usp=sf_link">contact</a>
           </li>
         </ul>
@@ -58,10 +58,9 @@
 
   <!--Intro-Carousel-->
   <main>
-    <section class="hero">
-      <div id="hero-carousel" class="carousel slide" data-ride="carousel" data-pause="hover" data-interval="2000">
+    <section id="hero-carousel" class="hero perfect-scroll">
+      <div class="carousel slide" data-ride="carousel" data-pause="hover" data-interval="2000">
         <div class="carousel-inner">
-
           <div class="carousel-item active">
             <img class="carousel-image" src="images/carousel1RS.jpg" alt="workshop-image">
           </div>
@@ -91,8 +90,8 @@
     </section>
 
     <!--Intro-->
-    <section class="container-fluid">
-      <p class="text-fluid">Hi, my name is Seth. I mentor children and young adults through insane, funny, dreamy,
+    <section id="intro">
+      <p class="container-fluid">Hi, my name is Seth. I mentor children and young adults through insane, funny, dreamy,
         scary, and beautiful stories that we write together. We start by looking for patterns within texts, then shape a
         plot that we write together.
         <br></br>
@@ -105,12 +104,13 @@
     </section>
 
     <!--Video-->
-
-    <iframe id="video" class="shadow" src="https://www.youtube.com/embed/52qlALVTa7Q" frameborder="0"
+    <section id="video" class="container-fluid-center">
+    <iframe class="video-style shadow" src="https://www.youtube.com/embed/52qlALVTa7Q" frameborder="0"
       allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</section>
 
-    <!-- Icons Section -->
-    <section class="container-workshops">
+    <!-- Workshop Section -->
+    <section class="container-workshop container-paper">
       <h1 class="h1">Why a Workshop for Kids?</h1>
       <div class="row">
         <div class="col-lg-4 features-column">
@@ -132,16 +132,16 @@
     </section>
 
     <!--CTA-->
-    <button class="cta"><a
+    <button  class="cta"><a target="_blank" rel="noopener noreferrer"
         href="https://docs.google.com/forms/d/e/1FAIpQLSfZlfetIOEOKngXdG4dIxf1YV0h0Z2YtYc-jRJjbL4acu4Y9w/viewform?usp=sf_link"
         class="cta">
-        <h3 class="cta-text">Let's Connect</h3>
+        <h3 class="cta-text">click here to get in touch</h3>
       </a>
     </button>
 
     <!--About Seth-->
-    <section id="about-seth">
-      <h1 class="h1">About Seth</h1>
+    <section class="container-wide">
+      <h1 id="about-seth" class="h1 perfect-scroll">About Seth</h1>
       <img class="about-seth-image" src="images/sethProfileRS.jpg" alt="">
       <p class="text-fluid">I love what I do. Most recently I taught second grade for seven years at Richmond
         Elementary, a dual language Japanese
@@ -155,7 +155,7 @@
       <br></br>
 
       <p class="text-fluid"><strong>Degrees and Licensure</strong></p>
-      <ul>
+      <ul class="text-fluid">
       <li class="li-degrees">
         <p class="degrees">Humanities, BA - Florida State University</p>
       </li>
@@ -172,15 +172,12 @@
     </section>
 
     <!--Rates-->
-    <section class="rates-background" id="rates">
-      <div class="container-fluid">
-        <h1 class="h1">Class Information and Rates</h1>
-        <p class="text-fluid">Classes are one hour online. Students need only a notebook and pencil to begin.
-        To serve more families of various income levels, I use a pay-what-you-want sliding scale. The starting-rate begins at
-        $30, with the option to pay more. The average family pays $40. If this cost is still prohibitive, please reach out. I’d
-        like to talk to you.
+    <section class="container-wide container-paper">
+        <h1 id="rates" class="h1 perfect-scroll">Class Information and Rates</h1>
+        <p class="text-fluid">Classes are one hour online. Students need only a notebook and pencil to begin. Rates are $50 per session. If this cost is prohibitive, please reach out. I’d like to talk to you.
+
         </p>
-        <div class="row">
+        <div class="row row-rates">
           <div class="col-lg-4 col-md-12 image-container">
             <img class="image-mentorship" src="images/bottomImage1RS.jpg" alt="child-writing">
           </div>
@@ -191,33 +188,21 @@
             <img class="image-mentorship" src="images/bottomImage3RS.jpg" alt="child-writing">
           </div>
         </div>
-      </div>
     </section>
 
     <!-- CTA -->
-    <button class="cta"><a
+    <button class="cta"><a target="_blank" rel="noopener noreferrer"
         href="https://docs.google.com/forms/d/e/1FAIpQLSfZlfetIOEOKngXdG4dIxf1YV0h0Z2YtYc-jRJjbL4acu4Y9w/viewform?usp=sf_link"
         class="cta">
-        <h3 class="cta-text">Let's Connect</h3>
+        <h3 class="cta-text">click here to get in touch</h3>
       </a>
     </button>
   </main>
 
   <!-- Footer -->
   <section id="footer">
-    <div class="row">
-      <!--
-      <div class="col-md-4">
-        <p class="footer-text">Privacy Policy</p>
-      </div>
-    -->
-      <div class="col-md-6">
-        <p class="footer-text">seth.denlinger@gmail.com</p>
-      </div>
-      <div class="col-md-6">
+        <!-- <p class="footer-text">Privacy Policy</p> -->
         <p class="footer-text">© 2020 Write with Me, Inc.</p>
-      </div>
-    </div>
   </section>
 
 
