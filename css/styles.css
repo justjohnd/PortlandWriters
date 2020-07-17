@@ -105,7 +105,12 @@
   /* Navigation Section */
   .navbar {
     background-color: #fff;
+    padding: 1rem 2rem;
+  }
 
+  .nav-item {
+    font-size: 1.5rem;
+    padding-left: 2rem;
   }
 
 
@@ -451,10 +456,6 @@
   main {
     padding-top: 202px;
   }
-
-    .container {
-      max-width: 100%;
-    } */
 
   /* Universals */
   .first-hr {
